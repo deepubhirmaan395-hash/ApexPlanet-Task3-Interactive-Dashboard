@@ -1,0 +1,6 @@
+KPI,Value,Formula,Business_Rationale
+Total Revenue,139399439.65,SUM(Total_Sales),Measures overall sales generated.
+Total Orders,1000.0,COUNT(DISTINCT Order_ID),Measures transaction volume.
+Average Order Value,139399.43965000001,SUM(Total_Sales) / COUNT(DISTINCT Order_ID),Shows the average revenue generated per order.
+Units Sold,5435.0,SUM(Quantity),Shows total units sold and demand volume.
+Unique Customers,947.0,COUNT(DISTINCT Customer_ID),Shows the size of the customer base.
