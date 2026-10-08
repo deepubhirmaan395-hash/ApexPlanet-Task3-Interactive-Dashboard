@@ -1,0 +1,15 @@
+<!doctype html>
+<html><head><meta charset="utf-8"><title>ApexPlanet Task 3 Dashboard</title>
+<script src="https://cdn.plot.ly/plotly-2.35.2.min.js"></script>
+<style>body{font-family:Arial;margin:24px} .kpis{display:flex;gap:12px;flex-wrap:wrap}.card{padding:16px;border:1px solid #ddd;border-radius:10px;min-width:150px}.chart{width:100%;max-width:1000px;height:430px;margin:20px 0}</style></head>
+<body><h1>ApexPlanet Task 3 — Interactive Sales Dashboard</h1>
+<div class="kpis">
+<div class="card"><b>Revenue</b><br>₹139.40M</div><div class="card"><b>Orders</b><br>1,000</div>
+<div class="card"><b>Average Order Value</b><br>₹139,399</div><div class="card"><b>Units Sold</b><br>5,435</div><div class="card"><b>Customers</b><br>947</div></div>
+<div id="monthly" class="chart"></div><div id="category" class="chart"></div><div id="city" class="chart"></div><div id="segment" class="chart"></div>
+<script>
+Plotly.newPlot('monthly',[{x:['Jan-25','Feb-25','Mar-25','Apr-25','May-25','Jun-25','Jul-25','Aug-25','Sep-25','Oct-25','Nov-25','Dec-25','Jan-26'],y:[10096190.73,11511181.46,13059899.94,12222700.17,10984689.25,12912332.64,11746226.8,9448471.22,9179896.29,12500936.5,12627620.22,12299904.44,809389.99],type:'scatter',mode:'lines+markers'}],{title:'Monthly Revenue',yaxis:{title:'Revenue (₹)'}});
+Plotly.newPlot('category',[{x:['Electronics','Education','Grocery','Furniture','Fashion'],y:[50778581.7,25031689.4,22231711.28,21521561.48,19835895.79],type:'bar'}],{title:'Revenue by Category',yaxis:{title:'Revenue (₹)'}});
+Plotly.newPlot('city',[{x:['Patna','Kolkata','Bengaluru','Mumbai','Hyderabad','Delhi','Pune','Gaya'],y:[19285966.89,18884349.57,18773574.32,18757050.17,17166766.87,16097079,14513175.9,14380859.39],type:'bar'}],{title:'Revenue by City',yaxis:{title:'Revenue (₹)'}});
+Plotly.newPlot('segment',[{labels:['At Risk','Needs Attention','Potential','Loyal','Champions'],values:[4054932.11,27873621.95,61327946.08,30316132.48,15826807.03],type:'pie',hole:.45}],{title:'Customer Segment Revenue'});
+</script></body></html>
